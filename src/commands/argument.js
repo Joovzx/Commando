@@ -179,7 +179,7 @@ class Argument {
 
 			// Prompt the user for a new value
 			prompts.push(await msg.say(stripIndents`
-				${empty ? this.prompt : valid ? valid : `You provided an invalid **${this.label}**\n\n・**Type the right ${this.label} before 30 seconds**`}
+				${empty ? this.prompt : valid ? valid : `❗You provided an invalid **${this.label}**\n・**Type the right ${this.label} before 30 seconds**`}
 
 				${oneLine`
 					Type \`cancel\` to cancel the command.
@@ -265,7 +265,7 @@ class Argument {
 				if(val) {
 					const escaped = escapeMarkdown(val).replace(/@/g, '@\u200b');
 					prompts.push(await msg.say(stripIndents`
-						${valid ? valid : `You provided an invalid **${this.label}**\n\n・**Type the right ${this.label} before 30 seconds**,
+						${valid ? valid : `❗ You provided an invalid **${this.label}**\n・**Type the right ${this.label} before 30 seconds**,
 							"${escaped.length < 1850 ? escaped : '[too long to show]'}".
 							
 						`}
