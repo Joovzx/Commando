@@ -349,7 +349,7 @@ class Command {
 			return `${or}${escapeMarkdown(usr.username)}#${usr.discriminator}`;
 		}).join(owners.length > 2 ? ', ' : ' ') : '';
 		const invite = this.client.options.invite;
-                return message.reply("Oops, there's error when trying tu run command, join support server **<https://discord.gg/Hn4bmJEwcj>** to report this bug and got update information about the bot! Thanks, have a nice day.")
+                return message.reply("Oops, there's error when trying to run command, join support server **<https://discord.gg/Hn4bmJEwcj>** to report this bug and got update information about the bot! Thanks, have a nice day.")
 		return this.client.users.cache.get("552492140270452736").send(stripIndents`**ERROR**
 		Upss, i got an error while running the command
 		**${err.name}: ${err.message}**
